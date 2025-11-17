@@ -2,6 +2,7 @@ import { Telegraf } from 'telegraf';
 import dotenv from 'dotenv';
 import { setupCommands } from './commands';
 import { logger } from './utils/logger';
+import { setupExampleCommands } from './examples';
 
 // Load environment variables
 dotenv.config();
@@ -13,15 +14,15 @@ async function main() {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
   if (!botToken) {
-    throw new Error(
-      'TELEGRAM_BOT_TOKEN is not defined. Please set it in your .env file.'
-    );
+    throw new Error('TELEGRAM_BOT_TOKEN is not defined. Please set it in your .env file.');
   }
 
   // Create bot instance
   const bot = new Telegraf(botToken);
 
-  // Set up commands
+  // Set up commands - register example commands first, then base commands
+  // This ensures all command handlers are registered before any text handlers
+  setupExampleCommands(bot);
   setupCommands(bot);
 
   // Error handling
@@ -45,4 +46,3 @@ main().catch((error) => {
   logger.error('Failed to start bot:', error);
   process.exit(1);
 });
-
