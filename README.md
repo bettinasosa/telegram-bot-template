@@ -43,12 +43,15 @@ A production-ready TypeScript template for building Telegram bots using [Telegra
 
 ### 2. Clone and Setup
 
-#### Option A: Clone in Cursor (Easiest for Beginners) ⭐
+#### Option A: Clone in Cursor
 
 1. Open Cursor
-2. Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
+2. Make sure you are signed in to Github on cursor
+3. Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux) OR press the git clone button
 3. Type "Git: Clone" and press Enter
-4. Paste: `https://github.com/<your-username>/telegram-bot-template`
+4. Paste: `https://github.com/bettinasosa/telegram-bot-template.git` get your link:
+<img width="532" height="419" alt="Screenshot 2025-11-20 at 17 30 43" src="https://github.com/user-attachments/assets/889db401-686e-4c88-ba77-8733ade4873b" />
+
 5. Choose where to save the project
 6. Click "Open" when prompted
 
@@ -58,7 +61,7 @@ Then run the setup:
 npm run setup
 ```
 
-#### Option B: Download as ZIP
+#### Option B: Download as ZIP (Easiest for Beginners) ⭐
 
 1. Click the green "Code" button on GitHub
 2. Select "Download ZIP"
@@ -74,7 +77,7 @@ npm run setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/telegram-bot-template.git
+git clone https://github.com/bettinasosa/telegram-bot-template.git
 cd telegram-bot-template
 
 # Run automated setup
