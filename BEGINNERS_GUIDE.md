@@ -200,7 +200,7 @@ Congratulations! You just created your first Telegram bot!
 ### Learn by Doing
 
 1. **Change the welcome message**:
-   - Open `src/commands/hello.ts`
+   - Open `src/commands/hello.ts` find the file on the left hand side file system
    - Find the text in quotes
    - Change it to something else
    - Save the file
